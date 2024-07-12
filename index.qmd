@@ -5,8 +5,15 @@ jupyter: python3
 
 This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-```{python}
-1 + 1
-```
+## 홈페이지 첫 화면입니다.
+
+
+첫 방문을 환영합니다.
+
+
+### 페이지 158 문제입니다.
+
+mpg 데이터는 연비를 나타내는 변수가 hwy, cty 두 종류로 분리되어 있습니다.
+두 변수를 각각 활용하는 대신 하나의 합산 연비 변수를 만들어 분석하려고 합니다.
+

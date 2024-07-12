@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "testwebsite",
+    "section": "",
+    "text": "This is a Quarto website."
+  },
+  {
+    "objectID": "index.html#홈페이지-첫-화면입니다.",
+    "href": "index.html#홈페이지-첫-화면입니다.",
+    "title": "testwebsite",
+    "section": "홈페이지 첫 화면입니다.",
+    "text": "홈페이지 첫 화면입니다.\n첫 방문을 환영합니다.\n\n페이지 158 문제입니다.\nmpg 데이터는 연비를 나타내는 변수가 hwy, cty 두 종류로 분리되어 있습니다. 두 변수를 각각 활용하는 대신 하나의 합산 연비 변수를 만들어 분석하려고 합니다."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n2"
+  }
+]
