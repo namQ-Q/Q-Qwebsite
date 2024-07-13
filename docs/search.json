@@ -11,7 +11,7 @@
     "href": "index.html#홈페이지-첫-화면입니다.",
     "title": "testwebsite",
     "section": "홈페이지 첫 화면입니다.",
-    "text": "홈페이지 첫 화면입니다.\n첫 방문을 환영합니다.\n\n페이지 158 문제입니다.\nmpg 데이터는 연비를 나타내는 변수가 hwy, cty 두 종류로 분리되어 있습니다. 두 변수를 각각 활용하는 대신 하나의 합산 연비 변수를 만들어 분석하려고 합니다."
+    "text": "홈페이지 첫 화면입니다.\n첫 방문을 환영합니다.\n\n페이지 158 문제입니다.\nmpg 데이터는 연비를 나타내는 변수가 hwy, cty 두 종류로 분리되어 있습니다. 두 변수를 각각 활용하는 대신 하나의 합산 연비 변수를 만들어 분석하려고 합니다.\n\nmpg 복사본을 만들고 cty와 hwy를 더한 ’합산연비 변수’를 추가하세요.\n\nmpg_copy = mpg.copy()\nmpg_copy = mpg_copy.assign(sum_ch = lambda x: x['cty'] + x['hwy'])\n\n앞에서 만든 ’합산연비 변수’를 2로 나눠 ’평균연비 변수’를 추가하세요.\n\nmpg_copy = mpg_copy.assign(mean = lambda x: x['sum_ch'] / 2)\n\n’평균연비 변수’가 가장 높은 자동차 3종의 데이터를 출력하세요.\n\nmpg_copy.head(3)"
   },
   {
     "objectID": "about.html",
