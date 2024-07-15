@@ -3,3 +3,50 @@ title: "homework1"
 jupyter: python3
 ---
 
+## 84페이지 혼자서 해보기
+
+Q1
+```{python}
+import pandas as pd
+df = pd.DataFrame({'제품'   : ['사과', '딸기', '수박'],
+                   '가격'   : [1800, 1500, 3000],
+                   '판매량' : [24, 38, 13]}
+)
+df
+```
+Q2
+```{python}
+sum(df['가격']) / 3         # 과일의 가격 평균
+sum(df['판매량']) / 3       # 판매량 평균균
+```
+
+
+## 115페이지 혼자서 해보기기
+
+Q1
+```{python}
+mpg = pd.read_csv('mpg.csv')
+mpg_copy = mpg.copy()
+mpg_copy
+```
+
+Q2
+```{python}
+mpg_copy = mpg_copy.rename(columns = {'cty' : 'city',
+                                      'hwy' : 'highway'})
+
+mpg_copy
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

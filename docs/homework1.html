@@ -20,10 +20,44 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -66,6 +100,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -111,8 +151,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#페이지-혼자서-해보기" id="toc-페이지-혼자서-해보기" class="nav-link active" data-scroll-target="#페이지-혼자서-해보기">84페이지 혼자서 해보기</a></li>
+  <li><a href="#페이지-혼자서-해보기기" id="toc-페이지-혼자서-해보기기" class="nav-link" data-scroll-target="#페이지-혼자서-해보기기">115페이지 혼자서 해보기기</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -136,8 +183,445 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="페이지-혼자서-해보기" class="level2">
+<h2 class="anchored" data-anchor-id="페이지-혼자서-해보기">84페이지 혼자서 해보기</h2>
+<p>Q1</p>
+<div id="c67bea42" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'제품'</span>   : [<span class="st">'사과'</span>, <span class="st">'딸기'</span>, <span class="st">'수박'</span>],</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'가격'</span>   : [<span class="dv">1800</span>, <span class="dv">1500</span>, <span class="dv">3000</span>],</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'판매량'</span> : [<span class="dv">24</span>, <span class="dv">38</span>, <span class="dv">13</span>]}</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
 
 
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">제품</th>
+<th data-quarto-table-cell-role="th">가격</th>
+<th data-quarto-table-cell-role="th">판매량</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>사과</td>
+<td>1800</td>
+<td>24</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>딸기</td>
+<td>1500</td>
+<td>38</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>수박</td>
+<td>3000</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Q2</p>
+<div id="a5627410" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(df[<span class="st">'가격'</span>]) <span class="op">/</span> <span class="dv">3</span>         <span class="co"># 과일의 가격 평균</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(df[<span class="st">'판매량'</span>]) <span class="op">/</span> <span class="dv">3</span>       <span class="co"># 판매량 평균균</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>25.0</code></pre>
+</div>
+</div>
+</section>
+<section id="페이지-혼자서-해보기기" class="level2">
+<h2 class="anchored" data-anchor-id="페이지-혼자서-해보기기">115페이지 혼자서 해보기기</h2>
+<p>Q1</p>
+<div id="74a5dd3e" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mpg <span class="op">=</span> pd.read_csv(<span class="st">'mpg.csv'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>mpg_copy <span class="op">=</span> mpg.copy()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>mpg_copy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">manufacturer</th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">displ</th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">cyl</th>
+<th data-quarto-table-cell-role="th">trans</th>
+<th data-quarto-table-cell-role="th">drv</th>
+<th data-quarto-table-cell-role="th">cty</th>
+<th data-quarto-table-cell-role="th">hwy</th>
+<th data-quarto-table-cell-role="th">fl</th>
+<th data-quarto-table-cell-role="th">category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>audi</td>
+<td>a4</td>
+<td>1.8</td>
+<td>1999</td>
+<td>4</td>
+<td>auto(l5)</td>
+<td>f</td>
+<td>18</td>
+<td>29</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>audi</td>
+<td>a4</td>
+<td>1.8</td>
+<td>1999</td>
+<td>4</td>
+<td>manual(m5)</td>
+<td>f</td>
+<td>21</td>
+<td>29</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>audi</td>
+<td>a4</td>
+<td>2.0</td>
+<td>2008</td>
+<td>4</td>
+<td>manual(m6)</td>
+<td>f</td>
+<td>20</td>
+<td>31</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>audi</td>
+<td>a4</td>
+<td>2.0</td>
+<td>2008</td>
+<td>4</td>
+<td>auto(av)</td>
+<td>f</td>
+<td>21</td>
+<td>30</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>audi</td>
+<td>a4</td>
+<td>2.8</td>
+<td>1999</td>
+<td>6</td>
+<td>auto(l5)</td>
+<td>f</td>
+<td>16</td>
+<td>26</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">229</td>
+<td>volkswagen</td>
+<td>passat</td>
+<td>2.0</td>
+<td>2008</td>
+<td>4</td>
+<td>auto(s6)</td>
+<td>f</td>
+<td>19</td>
+<td>28</td>
+<td>p</td>
+<td>midsize</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">230</td>
+<td>volkswagen</td>
+<td>passat</td>
+<td>2.0</td>
+<td>2008</td>
+<td>4</td>
+<td>manual(m6)</td>
+<td>f</td>
+<td>21</td>
+<td>29</td>
+<td>p</td>
+<td>midsize</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">231</td>
+<td>volkswagen</td>
+<td>passat</td>
+<td>2.8</td>
+<td>1999</td>
+<td>6</td>
+<td>auto(l5)</td>
+<td>f</td>
+<td>16</td>
+<td>26</td>
+<td>p</td>
+<td>midsize</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">232</td>
+<td>volkswagen</td>
+<td>passat</td>
+<td>2.8</td>
+<td>1999</td>
+<td>6</td>
+<td>manual(m5)</td>
+<td>f</td>
+<td>18</td>
+<td>26</td>
+<td>p</td>
+<td>midsize</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">233</td>
+<td>volkswagen</td>
+<td>passat</td>
+<td>3.6</td>
+<td>2008</td>
+<td>6</td>
+<td>auto(s6)</td>
+<td>f</td>
+<td>17</td>
+<td>26</td>
+<td>p</td>
+<td>midsize</td>
+</tr>
+</tbody>
+</table>
+
+<p>234 rows × 11 columns</p>
+</div>
+</div>
+</div>
+<p>Q2</p>
+<div id="7ad46c93" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mpg_copy <span class="op">=</span> mpg_copy.rename(columns <span class="op">=</span> {<span class="st">'cty'</span> : <span class="st">'city'</span>,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                                      <span class="st">'hwy'</span> : <span class="st">'highway'</span>})</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>mpg_copy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">manufacturer</th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">displ</th>
+<th data-quarto-table-cell-role="th">year</th>
+<th data-quarto-table-cell-role="th">cyl</th>
+<th data-quarto-table-cell-role="th">trans</th>
+<th data-quarto-table-cell-role="th">drv</th>
+<th data-quarto-table-cell-role="th">city</th>
+<th data-quarto-table-cell-role="th">highway</th>
+<th data-quarto-table-cell-role="th">fl</th>
+<th data-quarto-table-cell-role="th">category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>audi</td>
+<td>a4</td>
+<td>1.8</td>
+<td>1999</td>
+<td>4</td>
+<td>auto(l5)</td>
+<td>f</td>
+<td>18</td>
+<td>29</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>audi</td>
+<td>a4</td>
+<td>1.8</td>
+<td>1999</td>
+<td>4</td>
+<td>manual(m5)</td>
+<td>f</td>
+<td>21</td>
+<td>29</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>audi</td>
+<td>a4</td>
+<td>2.0</td>
+<td>2008</td>
+<td>4</td>
+<td>manual(m6)</td>
+<td>f</td>
+<td>20</td>
+<td>31</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>audi</td>
+<td>a4</td>
+<td>2.0</td>
+<td>2008</td>
+<td>4</td>
+<td>auto(av)</td>
+<td>f</td>
+<td>21</td>
+<td>30</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>audi</td>
+<td>a4</td>
+<td>2.8</td>
+<td>1999</td>
+<td>6</td>
+<td>auto(l5)</td>
+<td>f</td>
+<td>16</td>
+<td>26</td>
+<td>p</td>
+<td>compact</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">229</td>
+<td>volkswagen</td>
+<td>passat</td>
+<td>2.0</td>
+<td>2008</td>
+<td>4</td>
+<td>auto(s6)</td>
+<td>f</td>
+<td>19</td>
+<td>28</td>
+<td>p</td>
+<td>midsize</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">230</td>
+<td>volkswagen</td>
+<td>passat</td>
+<td>2.0</td>
+<td>2008</td>
+<td>4</td>
+<td>manual(m6)</td>
+<td>f</td>
+<td>21</td>
+<td>29</td>
+<td>p</td>
+<td>midsize</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">231</td>
+<td>volkswagen</td>
+<td>passat</td>
+<td>2.8</td>
+<td>1999</td>
+<td>6</td>
+<td>auto(l5)</td>
+<td>f</td>
+<td>16</td>
+<td>26</td>
+<td>p</td>
+<td>midsize</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">232</td>
+<td>volkswagen</td>
+<td>passat</td>
+<td>2.8</td>
+<td>1999</td>
+<td>6</td>
+<td>manual(m5)</td>
+<td>f</td>
+<td>18</td>
+<td>26</td>
+<td>p</td>
+<td>midsize</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">233</td>
+<td>volkswagen</td>
+<td>passat</td>
+<td>3.6</td>
+<td>2008</td>
+<td>6</td>
+<td>auto(s6)</td>
+<td>f</td>
+<td>17</td>
+<td>26</td>
+<td>p</td>
+<td>midsize</td>
+</tr>
+</tbody>
+</table>
+
+<p>234 rows × 11 columns</p>
+</div>
+</div>
+</div>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
