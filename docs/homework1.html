@@ -158,6 +158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#페이지-혼자서-해보기" id="toc-페이지-혼자서-해보기" class="nav-link active" data-scroll-target="#페이지-혼자서-해보기">84페이지 혼자서 해보기</a></li>
   <li><a href="#페이지-혼자서-해보기기" id="toc-페이지-혼자서-해보기기" class="nav-link" data-scroll-target="#페이지-혼자서-해보기기">115페이지 혼자서 해보기기</a></li>
+  <li><a href="#페이지-분석도전" id="toc-페이지-분석도전" class="nav-link" data-scroll-target="#페이지-분석도전">130페이지 분석도전</a></li>
   </ul>
 </nav>
     </div>
@@ -186,14 +187,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="페이지-혼자서-해보기" class="level2">
 <h2 class="anchored" data-anchor-id="페이지-혼자서-해보기">84페이지 혼자서 해보기</h2>
 <p>Q1</p>
-<div id="c67bea42" class="cell" data-execution_count="1">
+<div id="65ca2151" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'제품'</span>   : [<span class="st">'사과'</span>, <span class="st">'딸기'</span>, <span class="st">'수박'</span>],</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'가격'</span>   : [<span class="dv">1800</span>, <span class="dv">1500</span>, <span class="dv">3000</span>],</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'판매량'</span> : [<span class="dv">24</span>, <span class="dv">38</span>, <span class="dv">13</span>]}</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 
 
@@ -232,10 +233,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Q2</p>
-<div id="a5627410" class="cell" data-execution_count="2">
+<div id="1333c96d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(df[<span class="st">'가격'</span>]) <span class="op">/</span> <span class="dv">3</span>         <span class="co"># 과일의 가격 평균</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(df[<span class="st">'판매량'</span>]) <span class="op">/</span> <span class="dv">3</span>       <span class="co"># 판매량 평균균</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>25.0</code></pre>
 </div>
 </div>
@@ -243,11 +244,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="페이지-혼자서-해보기기" class="level2">
 <h2 class="anchored" data-anchor-id="페이지-혼자서-해보기기">115페이지 혼자서 해보기기</h2>
 <p>Q1</p>
-<div id="74a5dd3e" class="cell" data-execution_count="3">
+<div id="33cd9472" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mpg <span class="op">=</span> pd.read_csv(<span class="st">'mpg.csv'</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>mpg_copy <span class="op">=</span> mpg.copy()</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>mpg_copy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
@@ -431,12 +432,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Q2</p>
-<div id="7ad46c93" class="cell" data-execution_count="4">
+<div id="52e1076c" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mpg_copy <span class="op">=</span> mpg_copy.rename(columns <span class="op">=</span> {<span class="st">'cty'</span> : <span class="st">'city'</span>,</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                                      <span class="st">'hwy'</span> : <span class="st">'highway'</span>})</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>mpg_copy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
@@ -616,6 +617,864 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 
 <p>234 rows × 11 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="페이지-분석도전" class="level2">
+<h2 class="anchored" data-anchor-id="페이지-분석도전">130페이지 분석도전</h2>
+<p>Q1 midwest.csv를 불러와 데이터의 특징을 파악하세요.</p>
+<div id="f433a752" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mid <span class="op">=</span> pd.read_csv(<span class="st">'midwest.csv'</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>mid</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">PID</th>
+<th data-quarto-table-cell-role="th">county</th>
+<th data-quarto-table-cell-role="th">state</th>
+<th data-quarto-table-cell-role="th">area</th>
+<th data-quarto-table-cell-role="th">poptotal</th>
+<th data-quarto-table-cell-role="th">popdensity</th>
+<th data-quarto-table-cell-role="th">popwhite</th>
+<th data-quarto-table-cell-role="th">popblack</th>
+<th data-quarto-table-cell-role="th">popamerindian</th>
+<th data-quarto-table-cell-role="th">popasian</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">percollege</th>
+<th data-quarto-table-cell-role="th">percprof</th>
+<th data-quarto-table-cell-role="th">poppovertyknown</th>
+<th data-quarto-table-cell-role="th">percpovertyknown</th>
+<th data-quarto-table-cell-role="th">percbelowpoverty</th>
+<th data-quarto-table-cell-role="th">percchildbelowpovert</th>
+<th data-quarto-table-cell-role="th">percadultpoverty</th>
+<th data-quarto-table-cell-role="th">percelderlypoverty</th>
+<th data-quarto-table-cell-role="th">inmetro</th>
+<th data-quarto-table-cell-role="th">category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>561</td>
+<td>ADAMS</td>
+<td>IL</td>
+<td>0.052</td>
+<td>66090</td>
+<td>1270.961540</td>
+<td>63917</td>
+<td>1702</td>
+<td>98</td>
+<td>249</td>
+<td>...</td>
+<td>19.631392</td>
+<td>4.355859</td>
+<td>63628</td>
+<td>96.274777</td>
+<td>13.151443</td>
+<td>18.011717</td>
+<td>11.009776</td>
+<td>12.443812</td>
+<td>0</td>
+<td>AAR</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>562</td>
+<td>ALEXANDER</td>
+<td>IL</td>
+<td>0.014</td>
+<td>10626</td>
+<td>759.000000</td>
+<td>7054</td>
+<td>3496</td>
+<td>19</td>
+<td>48</td>
+<td>...</td>
+<td>11.243308</td>
+<td>2.870315</td>
+<td>10529</td>
+<td>99.087145</td>
+<td>32.244278</td>
+<td>45.826514</td>
+<td>27.385647</td>
+<td>25.228976</td>
+<td>0</td>
+<td>LHR</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>563</td>
+<td>BOND</td>
+<td>IL</td>
+<td>0.022</td>
+<td>14991</td>
+<td>681.409091</td>
+<td>14477</td>
+<td>429</td>
+<td>35</td>
+<td>16</td>
+<td>...</td>
+<td>17.033819</td>
+<td>4.488572</td>
+<td>14235</td>
+<td>94.956974</td>
+<td>12.068844</td>
+<td>14.036061</td>
+<td>10.852090</td>
+<td>12.697410</td>
+<td>0</td>
+<td>AAR</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>564</td>
+<td>BOONE</td>
+<td>IL</td>
+<td>0.017</td>
+<td>30806</td>
+<td>1812.117650</td>
+<td>29344</td>
+<td>127</td>
+<td>46</td>
+<td>150</td>
+<td>...</td>
+<td>17.278954</td>
+<td>4.197800</td>
+<td>30337</td>
+<td>98.477569</td>
+<td>7.209019</td>
+<td>11.179536</td>
+<td>5.536013</td>
+<td>6.217047</td>
+<td>1</td>
+<td>ALU</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>565</td>
+<td>BROWN</td>
+<td>IL</td>
+<td>0.018</td>
+<td>5836</td>
+<td>324.222222</td>
+<td>5264</td>
+<td>547</td>
+<td>14</td>
+<td>5</td>
+<td>...</td>
+<td>14.475999</td>
+<td>3.367680</td>
+<td>4815</td>
+<td>82.505140</td>
+<td>13.520249</td>
+<td>13.022889</td>
+<td>11.143211</td>
+<td>19.200000</td>
+<td>0</td>
+<td>AAR</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">432</td>
+<td>3048</td>
+<td>WAUKESHA</td>
+<td>WI</td>
+<td>0.034</td>
+<td>304715</td>
+<td>8962.205880</td>
+<td>298313</td>
+<td>1096</td>
+<td>672</td>
+<td>2699</td>
+<td>...</td>
+<td>35.396784</td>
+<td>7.667090</td>
+<td>299802</td>
+<td>98.387674</td>
+<td>3.121060</td>
+<td>3.785820</td>
+<td>2.590061</td>
+<td>4.085479</td>
+<td>1</td>
+<td>HLU</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">433</td>
+<td>3049</td>
+<td>WAUPACA</td>
+<td>WI</td>
+<td>0.045</td>
+<td>46104</td>
+<td>1024.533330</td>
+<td>45695</td>
+<td>22</td>
+<td>125</td>
+<td>92</td>
+<td>...</td>
+<td>16.549869</td>
+<td>3.138596</td>
+<td>44412</td>
+<td>96.330036</td>
+<td>8.488697</td>
+<td>10.071411</td>
+<td>6.953799</td>
+<td>10.338641</td>
+<td>0</td>
+<td>AAR</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">434</td>
+<td>3050</td>
+<td>WAUSHARA</td>
+<td>WI</td>
+<td>0.037</td>
+<td>19385</td>
+<td>523.918919</td>
+<td>19094</td>
+<td>29</td>
+<td>70</td>
+<td>43</td>
+<td>...</td>
+<td>15.064584</td>
+<td>2.620907</td>
+<td>19163</td>
+<td>98.854785</td>
+<td>13.786985</td>
+<td>20.050708</td>
+<td>11.695784</td>
+<td>11.804558</td>
+<td>0</td>
+<td>AAR</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">435</td>
+<td>3051</td>
+<td>WINNEBAGO</td>
+<td>WI</td>
+<td>0.035</td>
+<td>140320</td>
+<td>4009.142860</td>
+<td>136822</td>
+<td>697</td>
+<td>685</td>
+<td>1728</td>
+<td>...</td>
+<td>24.995504</td>
+<td>5.659847</td>
+<td>133950</td>
+<td>95.460376</td>
+<td>8.804031</td>
+<td>10.592031</td>
+<td>8.660587</td>
+<td>6.661094</td>
+<td>1</td>
+<td>HAU</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">436</td>
+<td>3052</td>
+<td>WOOD</td>
+<td>WI</td>
+<td>0.048</td>
+<td>73605</td>
+<td>1533.437500</td>
+<td>72157</td>
+<td>90</td>
+<td>481</td>
+<td>722</td>
+<td>...</td>
+<td>21.666382</td>
+<td>4.583725</td>
+<td>72685</td>
+<td>98.750085</td>
+<td>8.525831</td>
+<td>11.162997</td>
+<td>7.375656</td>
+<td>7.882918</td>
+<td>0</td>
+<td>AAR</td>
+</tr>
+</tbody>
+</table>
+
+<p>437 rows × 28 columns</p>
+</div>
+</div>
+</div>
+<div id="6b9fb37d" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>mid.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>(437, 28)</code></pre>
+</div>
+</div>
+<div id="03aa9b8f" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mid.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 437 entries, 0 to 436
+Data columns (total 28 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   PID                   437 non-null    int64  
+ 1   county                437 non-null    object 
+ 2   state                 437 non-null    object 
+ 3   area                  437 non-null    float64
+ 4   poptotal              437 non-null    int64  
+ 5   popdensity            437 non-null    float64
+ 6   popwhite              437 non-null    int64  
+ 7   popblack              437 non-null    int64  
+ 8   popamerindian         437 non-null    int64  
+ 9   popasian              437 non-null    int64  
+ 10  popother              437 non-null    int64  
+ 11  percwhite             437 non-null    float64
+ 12  percblack             437 non-null    float64
+ 13  percamerindan         437 non-null    float64
+ 14  percasian             437 non-null    float64
+ 15  percother             437 non-null    float64
+ 16  popadults             437 non-null    int64  
+ 17  perchsd               437 non-null    float64
+ 18  percollege            437 non-null    float64
+ 19  percprof              437 non-null    float64
+ 20  poppovertyknown       437 non-null    int64  
+ 21  percpovertyknown      437 non-null    float64
+ 22  percbelowpoverty      437 non-null    float64
+ 23  percchildbelowpovert  437 non-null    float64
+ 24  percadultpoverty      437 non-null    float64
+ 25  percelderlypoverty    437 non-null    float64
+ 26  inmetro               437 non-null    int64  
+ 27  category              437 non-null    object 
+dtypes: float64(15), int64(10), object(3)
+memory usage: 95.7+ KB</code></pre>
+</div>
+</div>
+<div id="add11904" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>mid.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">PID</th>
+<th data-quarto-table-cell-role="th">area</th>
+<th data-quarto-table-cell-role="th">poptotal</th>
+<th data-quarto-table-cell-role="th">popdensity</th>
+<th data-quarto-table-cell-role="th">popwhite</th>
+<th data-quarto-table-cell-role="th">popblack</th>
+<th data-quarto-table-cell-role="th">popamerindian</th>
+<th data-quarto-table-cell-role="th">popasian</th>
+<th data-quarto-table-cell-role="th">popother</th>
+<th data-quarto-table-cell-role="th">percwhite</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">perchsd</th>
+<th data-quarto-table-cell-role="th">percollege</th>
+<th data-quarto-table-cell-role="th">percprof</th>
+<th data-quarto-table-cell-role="th">poppovertyknown</th>
+<th data-quarto-table-cell-role="th">percpovertyknown</th>
+<th data-quarto-table-cell-role="th">percbelowpoverty</th>
+<th data-quarto-table-cell-role="th">percchildbelowpovert</th>
+<th data-quarto-table-cell-role="th">percadultpoverty</th>
+<th data-quarto-table-cell-role="th">percelderlypoverty</th>
+<th data-quarto-table-cell-role="th">inmetro</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>4.370000e+02</td>
+<td>437.000000</td>
+<td>4.370000e+02</td>
+<td>4.370000e+02</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>...</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>4.370000e+02</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>1437.338673</td>
+<td>0.033169</td>
+<td>9.613030e+04</td>
+<td>3097.742985</td>
+<td>8.183992e+04</td>
+<td>1.102388e+04</td>
+<td>343.109840</td>
+<td>1310.464531</td>
+<td>1612.931350</td>
+<td>95.558441</td>
+<td>...</td>
+<td>73.965546</td>
+<td>18.272736</td>
+<td>4.447259</td>
+<td>9.364228e+04</td>
+<td>97.110267</td>
+<td>12.510505</td>
+<td>16.447464</td>
+<td>10.918798</td>
+<td>11.389043</td>
+<td>0.343249</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>876.390266</td>
+<td>0.014679</td>
+<td>2.981705e+05</td>
+<td>7664.751786</td>
+<td>2.001966e+05</td>
+<td>7.895827e+04</td>
+<td>868.926751</td>
+<td>9518.394189</td>
+<td>18526.540699</td>
+<td>7.087358</td>
+<td>...</td>
+<td>5.843177</td>
+<td>6.261908</td>
+<td>2.408427</td>
+<td>2.932351e+05</td>
+<td>2.749863</td>
+<td>5.150155</td>
+<td>7.228634</td>
+<td>5.109166</td>
+<td>3.661259</td>
+<td>0.475338</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>561.000000</td>
+<td>0.005000</td>
+<td>1.701000e+03</td>
+<td>85.050000</td>
+<td>4.160000e+02</td>
+<td>0.000000e+00</td>
+<td>4.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>10.694087</td>
+<td>...</td>
+<td>46.912261</td>
+<td>7.336108</td>
+<td>0.520291</td>
+<td>1.696000e+03</td>
+<td>80.902441</td>
+<td>2.180168</td>
+<td>1.918955</td>
+<td>1.938504</td>
+<td>3.547067</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>670.000000</td>
+<td>0.024000</td>
+<td>1.884000e+04</td>
+<td>622.407407</td>
+<td>1.863000e+04</td>
+<td>2.900000e+01</td>
+<td>44.000000</td>
+<td>35.000000</td>
+<td>20.000000</td>
+<td>94.886032</td>
+<td>...</td>
+<td>71.325329</td>
+<td>14.113725</td>
+<td>2.997957</td>
+<td>1.836400e+04</td>
+<td>96.894572</td>
+<td>9.198715</td>
+<td>11.624088</td>
+<td>7.668009</td>
+<td>8.911763</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>1221.000000</td>
+<td>0.030000</td>
+<td>3.532400e+04</td>
+<td>1156.208330</td>
+<td>3.447100e+04</td>
+<td>2.010000e+02</td>
+<td>94.000000</td>
+<td>102.000000</td>
+<td>66.000000</td>
+<td>98.032742</td>
+<td>...</td>
+<td>74.246891</td>
+<td>16.797562</td>
+<td>3.814239</td>
+<td>3.378800e+04</td>
+<td>98.169562</td>
+<td>11.822313</td>
+<td>15.270164</td>
+<td>10.007610</td>
+<td>10.869119</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>2059.000000</td>
+<td>0.038000</td>
+<td>7.565100e+04</td>
+<td>2330.000000</td>
+<td>7.296800e+04</td>
+<td>1.291000e+03</td>
+<td>288.000000</td>
+<td>401.000000</td>
+<td>345.000000</td>
+<td>99.074935</td>
+<td>...</td>
+<td>77.195345</td>
+<td>20.549893</td>
+<td>4.949324</td>
+<td>7.284000e+04</td>
+<td>98.598636</td>
+<td>15.133226</td>
+<td>20.351878</td>
+<td>13.182182</td>
+<td>13.412162</td>
+<td>1.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>3052.000000</td>
+<td>0.110000</td>
+<td>5.105067e+06</td>
+<td>88018.396600</td>
+<td>3.204947e+06</td>
+<td>1.317147e+06</td>
+<td>10289.000000</td>
+<td>188565.000000</td>
+<td>384119.000000</td>
+<td>99.822821</td>
+<td>...</td>
+<td>88.898674</td>
+<td>48.078510</td>
+<td>20.791321</td>
+<td>5.023523e+06</td>
+<td>99.860384</td>
+<td>48.691099</td>
+<td>64.308477</td>
+<td>43.312464</td>
+<td>31.161972</td>
+<td>1.000000</td>
+</tr>
+</tbody>
+</table>
+
+<p>8 rows × 25 columns</p>
+</div>
+</div>
+</div>
+<p>Q2 poptotal변수를 total로, popasian변수를 asian으로 수정하세요</p>
+<div id="e3cc01e5" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>mid <span class="op">=</span> mid.rename(columns <span class="op">=</span> {<span class="st">'poptotal'</span> : <span class="st">'total'</span>})</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>mid <span class="op">=</span> mid.rename(columns <span class="op">=</span> {<span class="st">'popasian'</span> : <span class="st">'asian'</span>})</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>mid.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 437 entries, 0 to 436
+Data columns (total 28 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   PID                   437 non-null    int64  
+ 1   county                437 non-null    object 
+ 2   state                 437 non-null    object 
+ 3   area                  437 non-null    float64
+ 4   total                 437 non-null    int64  
+ 5   popdensity            437 non-null    float64
+ 6   popwhite              437 non-null    int64  
+ 7   popblack              437 non-null    int64  
+ 8   popamerindian         437 non-null    int64  
+ 9   asian                 437 non-null    int64  
+ 10  popother              437 non-null    int64  
+ 11  percwhite             437 non-null    float64
+ 12  percblack             437 non-null    float64
+ 13  percamerindan         437 non-null    float64
+ 14  percasian             437 non-null    float64
+ 15  percother             437 non-null    float64
+ 16  popadults             437 non-null    int64  
+ 17  perchsd               437 non-null    float64
+ 18  percollege            437 non-null    float64
+ 19  percprof              437 non-null    float64
+ 20  poppovertyknown       437 non-null    int64  
+ 21  percpovertyknown      437 non-null    float64
+ 22  percbelowpoverty      437 non-null    float64
+ 23  percchildbelowpovert  437 non-null    float64
+ 24  percadultpoverty      437 non-null    float64
+ 25  percelderlypoverty    437 non-null    float64
+ 26  inmetro               437 non-null    int64  
+ 27  category              437 non-null    object 
+dtypes: float64(15), int64(10), object(3)
+memory usage: 95.7+ KB</code></pre>
+</div>
+</div>
+<p>Q3 total, asian변수를 이용해 ‘전체 인구 대비 아시아 인구 백분율’ 파생변수를 추가하고, 히스토그램을 만들어 분포를 살펴보세요.</p>
+<div id="7996a23e" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>mid[<span class="st">'asia_per'</span>] <span class="op">=</span> (mid[<span class="st">'asian'</span>] <span class="op">/</span> mid[<span class="st">'total'</span>]) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>mid.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">PID</th>
+<th data-quarto-table-cell-role="th">county</th>
+<th data-quarto-table-cell-role="th">state</th>
+<th data-quarto-table-cell-role="th">area</th>
+<th data-quarto-table-cell-role="th">total</th>
+<th data-quarto-table-cell-role="th">popdensity</th>
+<th data-quarto-table-cell-role="th">popwhite</th>
+<th data-quarto-table-cell-role="th">popblack</th>
+<th data-quarto-table-cell-role="th">popamerindian</th>
+<th data-quarto-table-cell-role="th">asian</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">percprof</th>
+<th data-quarto-table-cell-role="th">poppovertyknown</th>
+<th data-quarto-table-cell-role="th">percpovertyknown</th>
+<th data-quarto-table-cell-role="th">percbelowpoverty</th>
+<th data-quarto-table-cell-role="th">percchildbelowpovert</th>
+<th data-quarto-table-cell-role="th">percadultpoverty</th>
+<th data-quarto-table-cell-role="th">percelderlypoverty</th>
+<th data-quarto-table-cell-role="th">inmetro</th>
+<th data-quarto-table-cell-role="th">category</th>
+<th data-quarto-table-cell-role="th">asia_per</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>561</td>
+<td>ADAMS</td>
+<td>IL</td>
+<td>0.052</td>
+<td>66090</td>
+<td>1270.961540</td>
+<td>63917</td>
+<td>1702</td>
+<td>98</td>
+<td>249</td>
+<td>...</td>
+<td>4.355859</td>
+<td>63628</td>
+<td>96.274777</td>
+<td>13.151443</td>
+<td>18.011717</td>
+<td>11.009776</td>
+<td>12.443812</td>
+<td>0</td>
+<td>AAR</td>
+<td>0.376759</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>562</td>
+<td>ALEXANDER</td>
+<td>IL</td>
+<td>0.014</td>
+<td>10626</td>
+<td>759.000000</td>
+<td>7054</td>
+<td>3496</td>
+<td>19</td>
+<td>48</td>
+<td>...</td>
+<td>2.870315</td>
+<td>10529</td>
+<td>99.087145</td>
+<td>32.244278</td>
+<td>45.826514</td>
+<td>27.385647</td>
+<td>25.228976</td>
+<td>0</td>
+<td>LHR</td>
+<td>0.451722</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>563</td>
+<td>BOND</td>
+<td>IL</td>
+<td>0.022</td>
+<td>14991</td>
+<td>681.409091</td>
+<td>14477</td>
+<td>429</td>
+<td>35</td>
+<td>16</td>
+<td>...</td>
+<td>4.488572</td>
+<td>14235</td>
+<td>94.956974</td>
+<td>12.068844</td>
+<td>14.036061</td>
+<td>10.852090</td>
+<td>12.697410</td>
+<td>0</td>
+<td>AAR</td>
+<td>0.106731</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>564</td>
+<td>BOONE</td>
+<td>IL</td>
+<td>0.017</td>
+<td>30806</td>
+<td>1812.117650</td>
+<td>29344</td>
+<td>127</td>
+<td>46</td>
+<td>150</td>
+<td>...</td>
+<td>4.197800</td>
+<td>30337</td>
+<td>98.477569</td>
+<td>7.209019</td>
+<td>11.179536</td>
+<td>5.536013</td>
+<td>6.217047</td>
+<td>1</td>
+<td>ALU</td>
+<td>0.486918</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>565</td>
+<td>BROWN</td>
+<td>IL</td>
+<td>0.018</td>
+<td>5836</td>
+<td>324.222222</td>
+<td>5264</td>
+<td>547</td>
+<td>14</td>
+<td>5</td>
+<td>...</td>
+<td>3.367680</td>
+<td>4815</td>
+<td>82.505140</td>
+<td>13.520249</td>
+<td>13.022889</td>
+<td>11.143211</td>
+<td>19.200000</td>
+<td>0</td>
+<td>AAR</td>
+<td>0.085675</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 29 columns</p>
+</div>
+</div>
+</div>
+<div id="118fcf8d" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>mid[<span class="st">'asia_per'</span>].plot.hist()</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="homework1_files/figure-html/cell-12-output-1.png" width="593" height="411" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Q4 아시아 인구 백분율 전체 평균을 구하고, 평균을 초과하면 ‘large’, 그 외에는 ’small’을 부여한 파생변수를 만들어 보세요.</p>
+<div id="564d90db" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>asia_mean <span class="op">=</span> mid[<span class="st">'asia_per'</span>].mean()</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>asia_mean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>0.4872461834357345</code></pre>
+</div>
+</div>
+<div id="778aa138" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>mid[<span class="st">'lar_sml'</span>] <span class="op">=</span> np.where(mid[<span class="st">'asia_per'</span>] <span class="op">&gt;</span> asia_mean, <span class="st">'large'</span>, <span class="st">'small'</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>mid[<span class="st">'lar_sml'</span>].head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>0    small
+1    small
+2    small
+3    small
+4    small
+5    large
+6    small
+7    small
+8    small
+9    large
+Name: lar_sml, dtype: object</code></pre>
+</div>
+</div>
+<p>Q5 ’large’와 ’small’에 해당되는 지역이 얼마나 많은지 빈도ㅛ와 빈도 막대 그래프를 만들어 확인해 보세요.</p>
+<div id="9b2cf2a0" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>count <span class="op">=</span> mid[<span class="st">'lar_sml'</span>].value_counts()</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>count</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>small    318
+large    119
+Name: lar_sml, dtype: int64</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
+</div>
+</div>
+<div id="71d9f33f" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>count.plot.bar(rot<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="homework1_files/figure-html/cell-16-output-1.png" width="575" height="411" class="figure-img"></p>
+</figure>
 </div>
 </div>
 </div>
