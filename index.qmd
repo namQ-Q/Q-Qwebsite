@@ -35,3 +35,6 @@ mpg_copy = mpg_copy.assign(mean = lambda x: x['sum_ch'] / 2)
 ```
 mpg_copy.head(3)
 ```
+
+
+## test입니다다
