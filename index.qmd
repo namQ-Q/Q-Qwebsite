@@ -5,7 +5,7 @@ toc: false
 about:
   id: hero-heading
   template: jolla
-  image:
+  image: bep.jfif
   links:
     - icon: github
       text: Github
