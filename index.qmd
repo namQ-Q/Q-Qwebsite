@@ -1,6 +1,10 @@
 ---
 title: "testwebsite"
 jupyter: python3
+toc: false
+about:
+  id: hero-heading
+  template: jolla
 ---
 
 This is a Quarto website.
