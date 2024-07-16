@@ -5,6 +5,11 @@ toc: false
 about:
   id: hero-heading
   template: jolla
+  image:
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/namQ-Q
 ---
 
 This is a Quarto website.
