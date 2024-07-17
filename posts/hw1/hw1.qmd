@@ -1,6 +1,8 @@
 ---
 title: "homework1"
-jupyter: python3
+author: "강남규"
+date: "2024-07-12"
+categories: [bigdata]
 ---
 
 ## 84페이지 혼자서 해보기
