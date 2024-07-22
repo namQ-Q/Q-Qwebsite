@@ -1,0 +1,71 @@
+---
+title: "homework3"
+author: "강남규"
+date: "2024-07-12"
+categories: [bigdata]
+---
+## 패키지 & 데이터 불러오기
+```{python}
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+mpg = pd.read_csv('mpg.csv')
+mid = pd.read_csv('midwest.csv')
+```
+
+
+
+## 204페이지 혼자서 해보기
+
+### Q1
+mpg데이터의 cty와 hwy간에 어떤 관계가 있는지 알아보려고 합니다. x축은 cty, y축은 hwy로 된 산점도를 만들어 보세요.
+
+```{python}
+sns.scatterplot(data = mpg, x = 'cty', y = 'hwy')
+plt.show()
+```
+
+### Q2
+미국의 지역별 인구통계 정보를 담은 midwest.csv를 이용해 전체 인구와 아시아인 인구 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 poptotal, y축은 popasian으로 된 산점도를 만들어 보세요. 전체 인구는 50만 명 이하, 아시아인 인구는 1만 명 이하인 지역만 산점도에 표시되게 설정하세요.
+
+```{python}
+sns.scatterplot(data = mid, x = 'poptotal', y = 'popasian') \
+   .set(xlim = [0,500000], ylim = [0,10000])
+plt.show()
+```
+
+## 211페이지 혼자서 해보기
+
+### Q1
+어떤 회사에서 생산한 'suv'차종의 도시 연비가 높은지 알아보려고 합니다. 'suv'차종을 대상으로 cty 평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현해 보세요. 막대는 연비가 높은 순으로 정렬하세요.
+
+```{python}
+df = mpg.groupby('manufacturer', as_index = False) \
+        .agg(mpg_mean = ('cty', 'mean')) \
+        .sort_values('mpg_mean', ascending = False) \
+        .head()
+sns.barplot(data = df, x = 'manufacturer', y = 'mpg_mean', hue = 'manufacturer')
+plt.show()
+```
+### Q2
+자동차 중에 어떤 category가 많은지 알아보려고 합니다. sns.barplot()을 이용해 자동차 종류별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요.
+
+```{python}
+df2 = mpg.groupby('category', as_index = False) \
+         .agg(count = ('category', 'count')) \
+         .sort_values('count', ascending = False)
+sns.barplot(data = df2, x = 'category', y = 'count', hue = 'category')
+plt.show()
+```
+
+
+
+
+
+
+
+
+
+
+
+
