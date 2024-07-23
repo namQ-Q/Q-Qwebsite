@@ -1,9 +1,32 @@
 ---
-title: "homework4"
-author: "강남규"
-date: "2024-07-12"
-categories: [bigdata]
+title: "project1 - 기역조"
+author: "강남규, 권효은, 김연예진, 김연진"
+date: "2024-07-24"
+categories: [project]
 ---
+# 주제
+**대한민국 연령별, 지역별 출생율 비교분석**
+
+# 분석목표
+
+**1. 8년동안 청년층과 비청년층 사이에 출산율이 어떻게 변했을까?**
+
+**2. 전국 평균 대비 시도별 청년층의 출산율 비교** 
+
+# 데이터
+
+- kosis에서 제공하는 '시도/합계출산율, 모의 연령별 출산율' 데이터를 이용
+  [kosis](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1B81A21&vw_cd=MT_ZTITLE&list_id=A21&scrId=&seqNo=&lang_mode=ko&obj_var_id=&itm_id=&conn_path=MT_ZTITLE&path=%252FstatisticsList%252FstatisticsListIndex.dot)
+
+- 청년층은 20~34세, 나머지는 비청년층으로 구분
+
+- 세종특별자치시 데이터가 생긴 12년도 이후 데이터를 이용
+
+# 용어정리
+
+**모의연령출산율** : 모의 연령별 당해연도의 출생아수를 당해연령의 여자인구로 나눈 비율을 1,000분비로 나타낸 것
+
+# 코드드
 
 **원본 데이터 불러오기 및 리스트 초기화**
 
