@@ -223,8 +223,8 @@ br2
 ``` {python}
 br2 = br2.rename(columns = {0 : 'birth_rate'})
 br2 = br2.rename_axis(columns = {'' : 'year'}, index = None)
-br2
 br2 = br2.reset_index().rename(columns={'index': 'year'})
+br2
 
 ```
 
@@ -301,6 +301,8 @@ plt.show()
 **- 과거대비 청년층의 출산율 감소**
 
 **- 비청년층 출산율 변화 없음**
+
+**- 장기적으로 사회구조 문제 발생**
 
 # 분석2
 ## Q 전국 평균 대비 시도별 청년층의 출산율 비교
