@@ -23,13 +23,16 @@ import matplotlib.pyplot as plt
 
 
 ```{python}
-def nomal(x, mu, sigma):
+def normal(x, mu, sigma):
     a = 1 / (sigma * math.sqrt(2 * math.pi))
     b = (x - mu) / sigma
-    return a * math.exp(-1 / 2 * b**2)
+    return a * math.exp(-0.5 * b ** 2)
 
 k = np.linspace(-2, 8, 100)
-p = norm.pdf(k, 3, 2)
+p = []
+for i in k:
+  p.append(normal(i, 3, 2))
+
 plt.plot(k,p)
 plt.show()
 plt.clf()  

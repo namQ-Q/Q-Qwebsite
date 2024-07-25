@@ -204,7 +204,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="패키지-불러오기" class="level1">
 <h1>패키지 불러오기</h1>
-<div id="2e00ed5d" class="cell" data-execution_count="1">
+<div id="b7284e53" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
@@ -222,17 +222,20 @@ Requirement already satisfied: numpy&lt;2.3,&gt;=1.23.5 in c:\users\user\appdata
 <section id="q1" class="level1">
 <h1>Q1</h1>
 <p>정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고,정규분포 mu = 3, sigma = 2 의 pdf를 그릴 것.</p>
-<div id="d61f9363" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> nomal(x, mu, sigma):</span>
+<div id="62c9c2ba" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> normal(x, mu, sigma):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (sigma <span class="op">*</span> math.sqrt(<span class="dv">2</span> <span class="op">*</span> math.pi))</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> (x <span class="op">-</span> mu) <span class="op">/</span> sigma</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">*</span> math.exp(<span class="op">-</span><span class="dv">1</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> b<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">*</span> math.exp(<span class="op">-</span><span class="fl">0.5</span> <span class="op">*</span> b <span class="op">**</span> <span class="dv">2</span>)</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">100</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> norm.pdf(k, <span class="dv">3</span>, <span class="dv">2</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.plot(k,p)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>plt.clf()  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> []</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> k:</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  p.append(normal(i, <span class="dv">3</span>, <span class="dv">2</span>))</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.plot(k,p)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>plt.clf()  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -253,7 +256,7 @@ Requirement already satisfied: numpy&lt;2.3,&gt;=1.23.5 in c:\users\user\appdata
 </ul>
 <section id="px-3" class="level2">
 <h2 class="anchored" data-anchor-id="px-3">1. P(X &lt; 3)</h2>
-<div id="229878c2" class="cell" data-execution_count="3">
+<div id="d6e4867e" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a1 <span class="op">=</span> norm.cdf(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'확률은 '</span> <span class="op">+</span> <span class="bu">str</span>(a1.<span class="bu">round</span>(<span class="dv">2</span>)) <span class="op">+</span> <span class="st">'입니다'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -264,7 +267,7 @@ Requirement already satisfied: numpy&lt;2.3,&gt;=1.23.5 in c:\users\user\appdata
 </section>
 <section id="p2-x-5" class="level2">
 <h2 class="anchored" data-anchor-id="p2-x-5">2. P(2 &lt; X &lt; 5)</h2>
-<div id="d77331b7" class="cell" data-execution_count="4">
+<div id="fb84aad4" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a2 <span class="op">=</span> norm.cdf(<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">-</span> norm.cdf(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'확률은 '</span> <span class="op">+</span> <span class="bu">str</span>(a2.<span class="bu">round</span>(<span class="dv">2</span>)) <span class="op">+</span> <span class="st">'입니다'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -275,7 +278,7 @@ Requirement already satisfied: numpy&lt;2.3,&gt;=1.23.5 in c:\users\user\appdata
 </section>
 <section id="px-3-or-x-7" class="level2">
 <h2 class="anchored" data-anchor-id="px-3-or-x-7">3. P(X &lt; 3 or X &gt; 7)</h2>
-<div id="8830c5d5" class="cell" data-execution_count="5">
+<div id="146eddb9" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a3 <span class="op">=</span> norm.cdf(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> norm.cdf(<span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">3</span>))</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'확률은 '</span> <span class="op">+</span> <span class="bu">str</span>(a3.<span class="bu">round</span>(<span class="dv">2</span>)) <span class="op">+</span> <span class="st">'입니다'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -288,7 +291,7 @@ Requirement already satisfied: numpy&lt;2.3,&gt;=1.23.5 in c:\users\user\appdata
 <section id="q3" class="level1">
 <h1>Q3</h1>
 <p>LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?</p>
-<div id="233ea066" class="cell" data-execution_count="6">
+<div id="5d46ee41" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>a4 <span class="op">=</span> norm.ppf(<span class="fl">0.95</span>, <span class="dv">30</span>, <span class="dv">2</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'해당 학생의 점수는 '</span> <span class="op">+</span> <span class="bu">str</span>(a4.<span class="bu">round</span>(<span class="dv">2</span>)) <span class="op">+</span> <span class="st">'입니다'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
