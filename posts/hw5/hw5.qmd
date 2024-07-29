@@ -1,0 +1,63 @@
+---
+title: "homework4"
+author: "강남규"
+date: "2024-07-29"
+categories: [bigdata]
+---
+
+**균일분포 (3, 7)에서 20개의 표본 뽑아서 분산 추정하기!**
+
+# 패키지 불러오기
+
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from scipy.stats import uniform
+```
+
+
+# 표본뽑기
+
+```{python}
+x = uniform.rvs(loc = 3, scale = 4, size = 20*10000)
+x = x.reshape(-1,20)
+```
+
+
+# Q1
+n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)
+
+## s_2 구하고 모분산 막대 그리기기
+
+```{python}
+s_2 = x.var(axis = 1, ddof = 0)
+plt.hist(s_2)
+plt.axvline(x.var(), color='green')
+plt.show()
+plt.clf()
+```
+
+## k_2 구하고 모분산 막대그리기기
+
+```{python}
+k_2 = x.var(axis = 1, ddof = 0)
+plt.hist(k_2)
+plt.axvline(x.var(), color='green')
+plt.show()
+plt.clf()
+```
+
+# Q2
+- 결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!
+
+n-1로 나눈 결과가 n으로 나눈 결과값보다 좀 더 대칭적인 모습을 보인다.
+
+
+
+
+
+
+
+
