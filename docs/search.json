@@ -144,7 +144,7 @@
     "href": "blog.html",
     "title": "hw Dummy",
     "section": "",
-    "text": "homework4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\n강남규\n\n\n\n\n\n\n\n\n\n\n\n\nhomework4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\n강남규\n\n\n\n\n\n\n\n\n\n\n\n\nproject1 - 기역조\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 24, 2024\n\n\n강남규, 권효은, 김연예진, 김연진\n\n\n\n\n\n\n\n\n\n\n\n\nhomework1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\n강남규\n\n\n\n\n\n\n\n\n\n\n\n\nhomework2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\n강남규\n\n\n\n\n\n\n\n\n\n\n\n\nhomework3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\n강남규\n\n\n\n\n\n\nNo matching items"
+    "text": "homework5\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\n강남규\n\n\n\n\n\n\n\n\n\n\n\n\nhomework4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\n강남규\n\n\n\n\n\n\n\n\n\n\n\n\nproject1 - 기역조\n\n\n\n\n\n\nproject\n\n\n\n\n\n\n\n\n\nJul 24, 2024\n\n\n강남규, 권효은, 김연예진, 김연진\n\n\n\n\n\n\n\n\n\n\n\n\nhomework1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\n강남규\n\n\n\n\n\n\n\n\n\n\n\n\nhomework2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\n강남규\n\n\n\n\n\n\n\n\n\n\n\n\nhomework3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\n강남규\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "hw3.html",
@@ -359,21 +359,21 @@
   {
     "objectID": "posts/hw5/hw5.html",
     "href": "posts/hw5/hw5.html",
-    "title": "homework4",
+    "title": "homework5",
     "section": "",
     "text": "균일분포 (3, 7)에서 20개의 표본 뽑아서 분산 추정하기!"
   },
   {
     "objectID": "posts/hw5/hw5.html#s_2-구하고-모분산-막대-그리기기",
     "href": "posts/hw5/hw5.html#s_2-구하고-모분산-막대-그리기기",
-    "title": "homework4",
+    "title": "homework5",
     "section": "s_2 구하고 모분산 막대 그리기기",
     "text": "s_2 구하고 모분산 막대 그리기기\n\ns_2 = x.var(axis = 1, ddof = 1)\nplt.hist(s_2)\nplt.axvline(x.var(), color='green')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   },
   {
     "objectID": "posts/hw5/hw5.html#k_2-구하고-모분산-막대그리기기",
     "href": "posts/hw5/hw5.html#k_2-구하고-모분산-막대그리기기",
-    "title": "homework4",
+    "title": "homework5",
     "section": "k_2 구하고 모분산 막대그리기기",
     "text": "k_2 구하고 모분산 막대그리기기\n\nk_2 = x.var(axis = 1, ddof = 0)\nplt.hist(k_2)\nplt.axvline(x.var(), color='green')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   }
