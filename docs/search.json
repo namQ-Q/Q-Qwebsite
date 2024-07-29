@@ -376,5 +376,19 @@
     "title": "homework5",
     "section": "k_2 구하고 모분산 막대그리기기",
     "text": "k_2 구하고 모분산 막대그리기기\n\nk_2 = x.var(axis = 1, ddof = 0)\nplt.hist(k_2)\nplt.axvline(x.var(), color='green')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw5/hw5.html#s_2-구하고-모분산-막대-그리기",
+    "href": "posts/hw5/hw5.html#s_2-구하고-모분산-막대-그리기",
+    "title": "homework5",
+    "section": "s_2 구하고 모분산 막대 그리기",
+    "text": "s_2 구하고 모분산 막대 그리기\n\ns_2 = x.var(axis = 1, ddof = 1)\nplt.hist(s_2)\nplt.axvline(x.var(), color='green')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw5/hw5.html#k_2-구하고-모분산-막대그리기",
+    "href": "posts/hw5/hw5.html#k_2-구하고-모분산-막대그리기",
+    "title": "homework5",
+    "section": "k_2 구하고 모분산 막대그리기",
+    "text": "k_2 구하고 모분산 막대그리기\n\nk_2 = x.var(axis = 1, ddof = 0)\nplt.hist(k_2)\nplt.axvline(x.var(), color='green')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   }
 ]
