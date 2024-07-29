@@ -32,7 +32,7 @@ n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분�
 ## s_2 구하고 모분산 막대 그리기기
 
 ```{python}
-s_2 = x.var(axis = 1, ddof = 0)
+s_2 = x.var(axis = 1, ddof = 1)
 plt.hist(s_2)
 plt.axvline(x.var(), color='green')
 plt.show()
