@@ -18,7 +18,7 @@ from scipy.stats import norm
 
 !pip install pyreadstat
 
-raw_welfare = pd.read_spss('koweps_hpwc14_2019_beta2.sav')
+raw_welfare = pd.read_spss('../../koweps_hpwc14_2019_beta2.sav')
 welfare = raw_welfare.copy()
 
 welfare = welfare.rename(
