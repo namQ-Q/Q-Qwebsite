@@ -1,0 +1,127 @@
+---
+title: "homework6"
+author: "강남규"
+date: "2024-07-30"
+categories: [bigdata]
+---
+
+**교재 챕터 9-2의 설문조사 그래프에서 각 성별 95% 신뢰구간 계산 후 그리기**
+
+# 패키지, 파일 불러오기
+
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+!pip install pyreadstat
+
+raw_welfare = pd.read_spss('koweps_hpwc14_2019_beta2.sav')
+welfare = raw_welfare.copy()
+
+welfare = welfare.rename(
+    columns = {'h14_g3'     : 'sex',
+               'h14_g4'     : 'birth',
+               'h14_g10'    : 'marriage_type',
+               'h14_g11'    : 'religion',
+               'p1402_8aq1' : 'income',
+               'h14_eco9'   : 'code_job',
+               'h14_reg7'   : 'code_region'}
+)
+welfare = welfare[['sex', 'birth', 'marriage_type', 'religion', 'income', 'code_job', 'code_region']]
+welfare
+```
+
+
+# Q1
+**성별에 따른 월급 차이 그래프 그리기**
+
+```{python}
+welfare['sex'] = np.where(welfare['sex'] == 1, 'male', 'female')
+sex_income = welfare.dropna(subset = 'income') \
+                    .groupby('sex', as_index = False) \
+                    .agg(income_mean = ('income', 'mean'))
+
+sns.barplot(data = sex_income, x = 'sex', y = 'income_mean', hue = 'sex')
+plt.show()
+```
+
+# Q2
+**각 성별 신뢰구간 구하기**
+
+- 각 성별의 평균과 표준편차 구하기
+
+```{python}
+sex_income2 = welfare.dropna(subset = 'income') \
+                    .groupby('sex', as_index = False)[['income']] \
+                    .agg(['mean', 'std'])
+
+
+male_mean = sex_income2.iloc[1, 1]
+female_mean = sex_income2.iloc[0, 1]
+male_std = sex_income2.iloc[1, 2]
+female_std = sex_income2.iloc[0, 2]
+
+print('남성의 월급 평균은 ' + str(sex_income2.iloc[1, 1].round(2)) + '입니다.')
+print('여성의 월급 평균은 ' + str(sex_income2.iloc[0, 1].round(2)) + '입니다.')
+print('남성의 월급 표준편차는 ' + str(sex_income2.iloc[1, 2].round(2)) + '입니다.')
+print('여성의 월급 표준편차는 ' + str(sex_income2.iloc[0, 2].round(2)) + '입니다.')
+```
+
+
+# Q3
+- Z(0.025)와 Z(0.975)구하기
+
+```{python}
+print('Z_0.025는 ' + str(norm.ppf(0.025,0,1).round(2)) + '입니다.')
+print('Z_0.975는 ' + str(norm.ppf(0.975,0,1).round(2)) + '입니다.')
+```
+
+# Q4
+**95% 신뢰구간 구하기**
+
+- 남성: X~N(349.04, 217.86)
+
+- 여성: X~N(186.29, 132.06)
+
+- 신뢰구간은 X_bar +- Z_alpha0.025 * sigma / sqrt(n)
+
+```{python}
+only_income = welfare.dropna(subset = 'income')
+
+male_count = len(only_income.query('sex == "male"'))
+female_count = len(only_income.query('sex == "female"'))
+
+print('남성의 수는 ' + str(len(only_income.query('sex == "male"'))) + '입니다.')
+print('여성의 수는 ' + str(len(only_income.query('sex == "female"'))) + '입니다.')
+
+```
+
+
+```{python}
+male_025 = male_mean - 1.96 * male_std / np.sqrt(male_count)
+male_975 = male_mean + 1.96 * male_std / np.sqrt(male_count)
+female_025 = female_mean - 1.96 * female_std / np.sqrt(female_count)
+female_975 = female_mean + 1.96 * female_std / np.sqrt(female_count)
+
+print('남성의 신뢰구간은 ' + str(male_025.round(2)) + '에서 ' + str(male_975.round(2)) + '까지입니다.')
+print('여성의 신뢰구간은 ' + str(female_025.round(2)) + '에서 ' + str(female_975.round(2)) + '까지입니다.')
+```
+
+
+# Q4
+**그래프 그리기**
+
+```{python}
+sns.barplot(data = sex_income, x = 'sex', y = 'income_mean', hue = 'sex')
+plt.plot([0, 0], [female_025, female_975], color='r')
+plt.plot([1, 1], [male_025, male_975], color='r')
+plt.show()
+```
+
+
+
+
+
