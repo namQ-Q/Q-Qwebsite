@@ -194,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#q2" id="toc-q2" class="nav-link" data-scroll-target="#q2">Q2</a></li>
   <li><a href="#q3" id="toc-q3" class="nav-link" data-scroll-target="#q3">Q3</a></li>
   <li><a href="#q4" id="toc-q4" class="nav-link" data-scroll-target="#q4">Q4</a></li>
-  <li><a href="#q4-1" id="toc-q4-1" class="nav-link" data-scroll-target="#q4-1">Q4</a></li>
+  <li><a href="#q5" id="toc-q5" class="nav-link" data-scroll-target="#q5">Q5</a></li>
   </ul>
 </nav>
     </div>
@@ -208,7 +208,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>교재 챕터 9-2의 설문조사 그래프에서 각 성별 95% 신뢰구간 계산 후 그리기</strong></p>
 <section id="패키지-파일-불러오기" class="level1">
 <h1>패키지, 파일 불러오기</h1>
-<div id="af20e4c7" class="cell" data-execution_count="1">
+<div id="3d182b8f" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -380,7 +380,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\user\appdata\roaming\pyth
 <section id="q1" class="level1">
 <h1>Q1</h1>
 <p><strong>성별에 따른 월급 차이 그래프 그리기</strong></p>
-<div id="e22c3e13" class="cell" data-execution_count="2">
+<div id="74d5a00a" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'sex'</span>] <span class="op">=</span> np.where(welfare[<span class="st">'sex'</span>] <span class="op">==</span> <span class="dv">1</span>, <span class="st">'male'</span>, <span class="st">'female'</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sex_income <span class="op">=</span> welfare.dropna(subset <span class="op">=</span> <span class="st">'income'</span>) <span class="op">\</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                    .groupby(<span class="st">'sex'</span>, as_index <span class="op">=</span> <span class="va">False</span>) <span class="op">\</span></span>
@@ -403,7 +403,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\user\appdata\roaming\pyth
 <ul>
 <li>각 성별의 평균과 표준편차 구하기</li>
 </ul>
-<div id="1d667b3e" class="cell" data-execution_count="3">
+<div id="18aec090" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sex_income2 <span class="op">=</span> welfare.dropna(subset <span class="op">=</span> <span class="st">'income'</span>) <span class="op">\</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                    .groupby(<span class="st">'sex'</span>, as_index <span class="op">=</span> <span class="va">False</span>)[[<span class="st">'income'</span>]] <span class="op">\</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                    .agg([<span class="st">'mean'</span>, <span class="st">'std'</span>])</span>
@@ -431,7 +431,7 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\user\appdata\roaming\pyth
 <ul>
 <li>Z(0.025)와 Z(0.975)구하기</li>
 </ul>
-<div id="b9fe108a" class="cell" data-execution_count="4">
+<div id="136ed5e2" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Z_0.025는 '</span> <span class="op">+</span> <span class="bu">str</span>(norm.ppf(<span class="fl">0.025</span>,<span class="dv">0</span>,<span class="dv">1</span>).<span class="bu">round</span>(<span class="dv">2</span>)) <span class="op">+</span> <span class="st">'입니다.'</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Z_0.975는 '</span> <span class="op">+</span> <span class="bu">str</span>(norm.ppf(<span class="fl">0.975</span>,<span class="dv">0</span>,<span class="dv">1</span>).<span class="bu">round</span>(<span class="dv">2</span>)) <span class="op">+</span> <span class="st">'입니다.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -448,7 +448,7 @@ Z_0.975는 1.96입니다.</code></pre>
 <li><p>여성: X~N(186.29, 132.06^2)</p></li>
 <li><p>신뢰구간은 X_bar +- Z_alpha0.025 * sigma / sqrt(n)</p></li>
 </ul>
-<div id="23203a19" class="cell" data-execution_count="5">
+<div id="ca2b9dcb" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>only_income <span class="op">=</span> welfare.dropna(subset <span class="op">=</span> <span class="st">'income'</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>male_count <span class="op">=</span> <span class="bu">len</span>(only_income.query(<span class="st">'sex == "male"'</span>))</span>
@@ -461,7 +461,7 @@ Z_0.975는 1.96입니다.</code></pre>
 여성의 수는 2245입니다.</code></pre>
 </div>
 </div>
-<div id="4560a0e2" class="cell" data-execution_count="6">
+<div id="4dd423cd" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>male_025 <span class="op">=</span> male_mean <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> male_std <span class="op">/</span> np.sqrt(male_count)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>male_975 <span class="op">=</span> male_mean <span class="op">+</span> <span class="fl">1.96</span> <span class="op">*</span> male_std <span class="op">/</span> np.sqrt(male_count)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>female_025 <span class="op">=</span> female_mean <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> female_std <span class="op">/</span> np.sqrt(female_count)</span>
@@ -475,10 +475,10 @@ Z_0.975는 1.96입니다.</code></pre>
 </div>
 </div>
 </section>
-<section id="q4-1" class="level1">
-<h1>Q4</h1>
+<section id="q5" class="level1">
+<h1>Q5</h1>
 <p><strong>그래프 그리기</strong></p>
-<div id="e90d5f5b" class="cell" data-execution_count="7">
+<div id="242d0847" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> sex_income, x <span class="op">=</span> <span class="st">'sex'</span>, y <span class="op">=</span> <span class="st">'income_mean'</span>, hue <span class="op">=</span> <span class="st">'sex'</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">0</span>, <span class="dv">0</span>], [female_025, female_975], color<span class="op">=</span><span class="st">'r'</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">1</span>, <span class="dv">1</span>], [male_025, male_975], color<span class="op">=</span><span class="st">'r'</span>)</span>
