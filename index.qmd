@@ -14,11 +14,8 @@ about:
 
 This is a Quarto website.
 
-
 ## 홈페이지 첫 화면입니다.
 
-
 첫 방문을 환영합니다.
-
 
 ### 테스트입니다.
