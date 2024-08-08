@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/blog_index.html",
       "/posts/hw6/hw6.html",
       "/posts/hw5/hw5.html",
       "/posts/hw4/hw4.html",
@@ -25,6 +26,18 @@
   },
   {
     "listing": "/blog_index.html",
+    "items": [
+      "/posts/hw6/hw6.html",
+      "/posts/hw5/hw5.html",
+      "/posts/hw4/hw4.html",
+      "/posts/proj1/proj1.html",
+      "/posts/hw1/hw1.html",
+      "/posts/hw2/hw2.html",
+      "/posts/hw3/hw3.html"
+    ]
+  },
+  {
+    "listing": "/posts/blog_index.html",
     "items": [
       "/posts/hw6/hw6.html",
       "/posts/hw5/hw5.html",
