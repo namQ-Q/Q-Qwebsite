@@ -1,0 +1,43 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"testwebsite\"\n",
+        "jupyter: python3\n",
+        "toc: false\n",
+        "about:\n",
+        "  id: hero-heading\n",
+        "  template: jolla\n",
+        "  image: bep.jfif\n",
+        "  links:\n",
+        "    - icon: github\n",
+        "      text: Github\n",
+        "      href: https://github.com/namQ-Q\n",
+        "---\n",
+        "\n",
+        "\n",
+        "This is a Quarto website.\n",
+        "\n",
+        "## 홈페이지 첫 화면입니다.\n",
+        "\n",
+        "첫 방문을 환영합니다.\n",
+        "\n",
+        "### 테스트입니다."
+      ],
+      "id": "be28ac9b"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\USER\\AppData\\Roaming\\Python\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
