@@ -7,7 +7,6 @@ listing:
     type: grid
     fields: [image, date, title, subtitle, categories, author, reading-time]  
     sort: "date desc"
-    categories: cloud
     sort-ui: true
     filter-ui: true
     page-size: 12
