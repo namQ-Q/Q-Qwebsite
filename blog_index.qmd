@@ -2,9 +2,7 @@
 title: "hw & project"
 listing:
   - id: posts-en
-    contents: 
-    - "**/*/**.qmd"
-    - "**/*/**.ipynb"
+    contents: posts
     type: grid
     fields: [image, date, title, subtitle, categories, author, reading-time]  
     sort: "date desc"
