@@ -12,6 +12,18 @@ about:
       href: https://github.com/namQ-Q
 ---
 
+<style>
+/* styles.css */
+#hero-heading {
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+</style>
+
 :::{#hero-heading}
 
 Welcome to my page. Feel free to explore and enjoy!
@@ -20,10 +32,3 @@ Welcome to my page. Feel free to explore and enjoy!
 
 :::
 
-This is a Quarto website.
-
-## 홈페이지 첫 화면입니다.
-
-첫 방문을 환영합니다.
-
-### 테스트입니다.
