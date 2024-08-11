@@ -1,5 +1,5 @@
 ---
-title: "testwebsite"
+title: "Namkyu Kang"
 jupyter: python3
 toc: false
 about:
