@@ -31,3 +31,39 @@ Welcome to my page. Feel free to explore and enjoy!
 I am interested in data analysis and visualization. On this page, I will upload homework and projects related to analysis and visualization from LS Bigdata School. Although my skills are still developing, I appreciate your feedback and advice.
 
 :::
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Contact Information</h1>
+    <p>If you have any questions, feel free to reach out to me:</p>
+    <ul>
+        <li>Email: <a href="mailto:your.email@example.com" class="email">rvsb22@naver.com</a></li>
+        <li>Phone: 010-7211-2475</li>
+    </ul>
+</body>
+</html>
+
+.email {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
