@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="강남규">
-<meta name="dcterms.date" content="2024-07-25">
+<meta name="dcterms.date" content="2024-07-30">
 
-<title>homework4 – ZI젼남규짱짱</title>
+<title>homework6 – ZI젼남규짱짱</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -143,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">homework4</h1>
+      <h1 class="title">homework6</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">bigdata</div>
               </div>
@@ -163,7 +129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 25, 2024</p>
+        <p class="date">July 30, 2024</p>
       </div>
     </div>
     
@@ -174,22 +140,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#패키지-불러오기" id="toc-패키지-불러오기" class="nav-link active" data-scroll-target="#패키지-불러오기">패키지 불러오기</a></li>
-  <li><a href="#q1" id="toc-q1" class="nav-link" data-scroll-target="#q1">Q1</a></li>
-  <li><a href="#q2" id="toc-q2" class="nav-link" data-scroll-target="#q2">Q2</a>
-  <ul class="collapse">
-  <li><a href="#px-3" id="toc-px-3" class="nav-link" data-scroll-target="#px-3">1. P(X &lt; 3)</a></li>
-  <li><a href="#p2-x-5" id="toc-p2-x-5" class="nav-link" data-scroll-target="#p2-x-5">2. P(2 &lt; X &lt; 5)</a></li>
-  <li><a href="#px-3-or-x-7" id="toc-px-3-or-x-7" class="nav-link" data-scroll-target="#px-3-or-x-7">3. P(X &lt; 3 or X &gt; 7)</a></li>
-  </ul></li>
-  <li><a href="#q3" id="toc-q3" class="nav-link" data-scroll-target="#q3">Q3</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -198,106 +150,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="패키지-불러오기" class="level1">
-<h1>패키지 불러오기</h1>
-<div id="b7284e53" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install scipy</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Defaulting to user installation because normal site-packages is not writeable
-Requirement already satisfied: scipy in c:\users\user\appdata\roaming\python\python312\site-packages (1.14.0)
-Requirement already satisfied: numpy&lt;2.3,&gt;=1.23.5 in c:\users\user\appdata\roaming\python\python312\site-packages (from scipy) (2.0.1)</code></pre>
-</div>
-</div>
-</section>
-<section id="q1" class="level1">
-<h1>Q1</h1>
-<p>정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고,정규분포 mu = 3, sigma = 2 의 pdf를 그릴 것.</p>
-<div id="62c9c2ba" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> normal(x, mu, sigma):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (sigma <span class="op">*</span> math.sqrt(<span class="dv">2</span> <span class="op">*</span> math.pi))</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> (x <span class="op">-</span> mu) <span class="op">/</span> sigma</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">*</span> math.exp(<span class="op">-</span><span class="fl">0.5</span> <span class="op">*</span> b <span class="op">**</span> <span class="dv">2</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">100</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> []</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> k:</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  p.append(normal(i, <span class="dv">3</span>, <span class="dv">2</span>))</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.plot(k,p)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>plt.clf()  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="hw4_files/figure-html/cell-3-output-1.png" width="587" height="411" class="figure-img"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="q2" class="level1">
-<h1>Q2</h1>
-<ul>
-<li>파이썬 scipy 패키지 사용해서 다음과 같은 확률을 구하시오</li>
-<li>X ~ N(2, 3^2)</li>
-</ul>
-<section id="px-3" class="level2">
-<h2 class="anchored" data-anchor-id="px-3">1. P(X &lt; 3)</h2>
-<div id="d6e4867e" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a1 <span class="op">=</span> norm.cdf(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'확률은 '</span> <span class="op">+</span> <span class="bu">str</span>(a1.<span class="bu">round</span>(<span class="dv">2</span>)) <span class="op">+</span> <span class="st">'입니다'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>확률은 0.63입니다</code></pre>
-</div>
-</div>
-</section>
-<section id="p2-x-5" class="level2">
-<h2 class="anchored" data-anchor-id="p2-x-5">2. P(2 &lt; X &lt; 5)</h2>
-<div id="fb84aad4" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a2 <span class="op">=</span> norm.cdf(<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">-</span> norm.cdf(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'확률은 '</span> <span class="op">+</span> <span class="bu">str</span>(a2.<span class="bu">round</span>(<span class="dv">2</span>)) <span class="op">+</span> <span class="st">'입니다'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>확률은 0.34입니다</code></pre>
-</div>
-</div>
-</section>
-<section id="px-3-or-x-7" class="level2">
-<h2 class="anchored" data-anchor-id="px-3-or-x-7">3. P(X &lt; 3 or X &gt; 7)</h2>
-<div id="146eddb9" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a3 <span class="op">=</span> norm.cdf(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> norm.cdf(<span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">3</span>))</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'확률은 '</span> <span class="op">+</span> <span class="bu">str</span>(a3.<span class="bu">round</span>(<span class="dv">2</span>)) <span class="op">+</span> <span class="st">'입니다'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>확률은 0.68입니다</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="q3" class="level1">
-<h1>Q3</h1>
-<p>LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?</p>
-<div id="5d46ee41" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>a4 <span class="op">=</span> norm.ppf(<span class="fl">0.95</span>, <span class="dv">30</span>, <span class="dv">2</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'해당 학생의 점수는 '</span> <span class="op">+</span> <span class="bu">str</span>(a4.<span class="bu">round</span>(<span class="dv">2</span>)) <span class="op">+</span> <span class="st">'입니다'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>해당 학생의 점수는 33.29입니다</code></pre>
-</div>
-</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

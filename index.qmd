@@ -28,7 +28,7 @@ about:
 
 Welcome to my page. Feel free to explore and enjoy!
 
-I am interested in data analysis and visualization. On this page, I will upload homework and projects related to analysis and visualization from LS Bigdata School. Although my skills are still developing, I appreciate your feedback and advice.
+I am interested in data `analysis` and `visualization`. On this page, I will upload homework and projects related to analysis and visualization from LS Bigdata School. Although my skills are still developing, I appreciate your feedback and advice.
 
 :::
 
@@ -49,21 +49,3 @@ I am interested in data analysis and visualization. On this page, I will upload 
     </ul>
 </body>
 </html>
-
-.email {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.email:hover {
-    text-decoration: underline;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-}
