@@ -2,7 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/hw7/hw.html",
+      "/posts/로지스틱 회귀분석 이해하기/logic_reg.html",
+      "/posts/hw7/hw7.html",
       "/posts/hw6/hw6.html",
       "/posts/hw5/hw5.html",
       "/posts/hw4/hw4.html",

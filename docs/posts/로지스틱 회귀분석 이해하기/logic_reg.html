@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="강남규">
-<meta name="dcterms.date" content="2024-09-02">
+<meta name="dcterms.date" content="2024-09-10">
 
-<title>homework7 – ZI젼남규짱짱</title>
+<title>logic_reg – ZI젼남규짱짱</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -103,35 +103,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -172,7 +143,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">homework7</h1>
+      <h1 class="title">logic_reg</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">bigdata</div>
               </div>
@@ -192,7 +163,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 2, 2024</p>
+        <p class="date">September 10, 2024</p>
       </div>
     </div>
     
@@ -209,29 +180,16 @@ window.Quarto = {
    
   <ul>
   <li><a href="#패키지-불러오기" id="toc-패키지-불러오기" class="nav-link active" data-scroll-target="#패키지-불러오기">패키지 불러오기</a></li>
-  <li><a href="#q1" id="toc-q1" class="nav-link" data-scroll-target="#q1">Q1</a>
-  <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1.</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2.</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">3.</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">4.</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">5.</a></li>
-  </ul></li>
-  <li><a href="#q2" id="toc-q2" class="nav-link" data-scroll-target="#q2">Q2</a>
-  <ul class="collapse">
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">1.</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">2.</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">3.</a></li>
-  </ul></li>
-  <li><a href="#q3" id="toc-q3" class="nav-link" data-scroll-target="#q3">Q3</a>
-  <ul class="collapse">
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">1.</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">2.</a></li>
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">3.</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">4.</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">5.</a></li>
-  <li><a href="#평균이-3-표준편차가-2인-정규분포를-따르는-확률변수에서-크기가-20인-표본-𝑥1-𝑥20을-뽑은-후-표본분산을-계산한-것을-𝑠12이라-생각해보죠.-다음을-수행해보세요" id="toc-평균이-3-표준편차가-2인-정규분포를-따르는-확률변수에서-크기가-20인-표본-𝑥1-𝑥20을-뽑은-후-표본분산을-계산한-것을-𝑠12이라-생각해보죠.-다음을-수행해보세요" class="nav-link" data-scroll-target="#평균이-3-표준편차가-2인-정규분포를-따르는-확률변수에서-크기가-20인-표본-𝑥1-𝑥20을-뽑은-후-표본분산을-계산한-것을-𝑠12이라-생각해보죠.-다음을-수행해보세요">6. 평균이 3, 표준편차가 2인 정규분포를 따르는 확률변수에서 크기가 20인 표본, 𝑥1, …, 𝑥20,을 뽑은 후 표본분산을 계산한 것을 𝑠1^2이라 생각해보죠. 다음을 수행해보세요!</a></li>
-  </ul></li>
+  <li><a href="#q1" id="toc-q1" class="nav-link" data-scroll-target="#q1">Q1</a></li>
+  <li><a href="#q2" id="toc-q2" class="nav-link" data-scroll-target="#q2">Q2</a></li>
+  <li><a href="#q3" id="toc-q3" class="nav-link" data-scroll-target="#q3">Q3</a></li>
+  <li><a href="#q4" id="toc-q4" class="nav-link" data-scroll-target="#q4">Q4</a></li>
+  <li><a href="#q5" id="toc-q5" class="nav-link" data-scroll-target="#q5">Q5</a></li>
+  <li><a href="#q6" id="toc-q6" class="nav-link" data-scroll-target="#q6">Q6</a></li>
+  <li><a href="#q7" id="toc-q7" class="nav-link" data-scroll-target="#q7">Q7</a></li>
+  <li><a href="#q8" id="toc-q8" class="nav-link" data-scroll-target="#q8">Q8</a></li>
+  <li><a href="#q9" id="toc-q9" class="nav-link" data-scroll-target="#q9">Q9</a></li>
+  <li><a href="#q10" id="toc-q10" class="nav-link" data-scroll-target="#q10">Q10</a></li>
   </ul>
 </nav>
     </div>
@@ -242,247 +200,156 @@ window.Quarto = {
 
 
 
-<p><strong>통계적 근본원인 알아보기</strong></p>
+<p><strong>로지스틱 회귀분석 이해하기</strong></p>
 <section id="패키지-불러오기" class="level1">
 <h1>패키지 불러오기</h1>
-<div id="d5fd074e" class="cell" data-execution_count="1">
+<div id="a47d235e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm, chi2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix, accuracy_score, f1_score</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="q1" class="level1">
 <h1>Q1</h1>
-<p><strong>2022년에 실시 된 ADP 실기 시험의 통계파트 표준점수는 평균이 30, 표준편차가 5인 정규분포를 따른다고 한다.</strong></p>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">1.</h2>
-<p><strong>ADP 실기 시험의 통계파트 표준점수의 밀도함수를 그려보세요.</strong></p>
-<div id="ccad2933" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> np.linspace(<span class="dv">10</span>, <span class="dv">50</span>, <span class="dv">200</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> norm.pdf(k, <span class="dv">30</span>, <span class="dv">5</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.plot(k,y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="hw7_files/figure-html/cell-3-output-1.png" width="579" height="411" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2.</h2>
-<p><strong>ADP 수험생을 임의로 1명을 선택하여 통계 점수를 조회했을때 45점 보다 높은 점수를 받았을 확률을 구하세요.</strong></p>
-<div id="5daa916a" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cdf <span class="op">=</span> norm.cdf(<span class="dv">45</span>, <span class="dv">30</span>, <span class="dv">5</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">1</span><span class="op">-</span>cdf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>데이터를 로드하고, 로지스틱 회귀모델을 적합하고, 회귀 표를 작성하세요.</strong></p>
+<div id="17cf12f0" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'C:/Users/USER/Documents/LS빅데이터스쿨/shinydashboard/data/leukemia_remission.csv'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.formula.logit(<span class="st">"REMISS ~ CELL + SMEAR + INFIL + LI + BLAST + TEMP"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                         data<span class="op">=</span>df).fit()</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>0.0013498980316301035</code></pre>
+<pre><code>Optimization terminated successfully.
+         Current function value: 0.399886
+         Iterations 10
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                 REMISS   No. Observations:                   27
+Model:                          Logit   Df Residuals:                       20
+Method:                           MLE   Df Model:                            6
+Date:                Tue, 10 Sep 2024   Pseudo R-squ.:                  0.3718
+Time:                        13:06:07   Log-Likelihood:                -10.797
+converged:                       True   LL-Null:                       -17.186
+Covariance Type:            nonrobust   LLR p-value:                   0.04670
+==============================================================================
+                 coef    std err          z      P&gt;|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     64.2581     74.965      0.857      0.391     -82.670     211.187
+CELL          30.8301     52.135      0.591      0.554     -71.353     133.013
+SMEAR         24.6863     61.526      0.401      0.688     -95.903     145.275
+INFIL        -24.9745     65.281     -0.383      0.702    -152.923     102.974
+LI             4.3605      2.658      1.641      0.101      -0.849       9.570
+BLAST         -0.0115      2.266     -0.005      0.996      -4.453       4.430
+TEMP        -100.1734     77.753     -1.288      0.198    -252.567      52.220
+==============================================================================
+
+Possibly complete quasi-separation: A fraction 0.11 of observations can be
+perfectly predicted. This might indicate that there is complete
+quasi-separation. In this case some parameters will not be identified.</code></pre>
 </div>
 </div>
-</section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2">3.</h2>
-<p><strong>슬통이는 상위 10%에 해당하는 점수를 얻었다고 한다면, 슬통이의 점수는 얼마인지 계산해보세요.</strong></p>
-<div id="a4e6bb66" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ppf1 <span class="op">=</span> norm.ppf(<span class="fl">0.9</span>, <span class="dv">30</span>, <span class="dv">5</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ppf1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>36.407757827723</code></pre>
-</div>
-</div>
-</section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3">4.</h2>
-<p><strong>슬기로운 통계생활의 해당 회차 수강생은 16명이었다고 한다. 16명의 통계 파트 점수를 평균내었을 때, 이 평균값이 따르는 분포의 확률밀도 함수를 1번의 그래프와 겹쳐 그려보세요.</strong></p>
-<div id="5712655e" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span> norm.pdf(k, <span class="dv">30</span>, <span class="dv">5</span><span class="op">/</span><span class="dv">4</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.plot(k,y)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.plot(k,y2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="hw7_files/figure-html/cell-6-output-1.png" width="579" height="411" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="section-4" class="level2">
-<h2 class="anchored" data-anchor-id="section-4">5.</h2>
-<p><strong>슬기로운 통계생활 ADP 반 수강생들의 통계점수를 평균내었다고 할 때, 이 값이 38점보다 높게나올 확률을 구하세요.</strong></p>
-<div id="47a6a25b" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>cdf2 <span class="op">=</span> norm.cdf(<span class="dv">38</span>, <span class="dv">30</span>, <span class="dv">5</span><span class="op">/</span><span class="dv">4</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">1</span><span class="op">-</span>cdf2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>7.76885222819601e-11</code></pre>
-</div>
-</div>
-</section>
 </section>
 <section id="q2" class="level1">
 <h1>Q2</h1>
-<p><strong>Covid‑19의 발병률은 1%라고 한다. 다음은 이번 코로나 사태로 인하여 코로나 의심 환자들 1,085명을 대상으로 슬통 회사의 “다잡아” 키트를 사용하여 양성 반응을 체크한 결과이다.</strong></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>키트/실제</th>
-<th>양성</th>
-<th>음성</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>양성</td>
-<td>370</td>
-<td>10</td>
-</tr>
-<tr class="even">
-<td>음성</td>
-<td>15</td>
-<td>690</td>
-</tr>
-</tbody>
-</table>
-<section id="section-5" class="level2">
-<h2 class="anchored" data-anchor-id="section-5">1.</h2>
-<p><strong>다잡아 키트가 코로나 바이러스에 걸린 사람을 양성으로 잡아낼 확률을 계산하세요.</strong></p>
-<div id="a8566218" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">370</span> <span class="op">/</span> <span class="dv">385</span>) <span class="op">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>96.1038961038961</code></pre>
-</div>
-</div>
-</section>
-<section id="section-6" class="level2">
-<h2 class="anchored" data-anchor-id="section-6">2.</h2>
-<p><strong>슬통 회사에서 다잡아 키트를 사용해 양성으로 나온 사람이 실제로는 코로나 바이러스에 걸려있을 확률을 97%라며, 키트의 우수성을 주장했다. 이 주장이 옳지 않은 이유를 서술하세요.</strong></p>
-</section>
-<section id="section-7" class="level2">
-<h2 class="anchored" data-anchor-id="section-7">3.</h2>
-<p><strong>Covid‑19 발병률을 사용하여, 키트의 결과값이 양성으로 나온 사람이 실제로 코로나 바이러스에 걸려있을 확률을 구하세요.</strong></p>
-<p>p(실제양성|키트양성)을 구하라</p>
-</section>
+<p><strong>해당 모델은 통계적으로 유의한가요? 그 이유를 검정통계량를 사용해서 설명하시오.</strong></p>
+<p>유의수준 0.05하에서 LLR p-value가 0.0467로 유의수준보다 작으므로 통계적으로 유의하다.</p>
 </section>
 <section id="q3" class="level1">
 <h1>Q3</h1>
-<p><strong>자유도가 𝑘인 카이제곱분포를 따르는 확률변수 𝑋 를 𝑋 ∼ 𝜒2(𝑘)과 같이 나타내고, 이 확률변수의 확률밀도함수는 다음과 같습니다.</strong></p>
-<p><span class="math display">\[
-f_X(x; k) = \frac{1}{2^{k/2} \Gamma(k/2)} x^{k/2-1} e^{-x/2}
-\]</span></p>
-<section id="section-8" class="level2">
-<h2 class="anchored" data-anchor-id="section-8">1.</h2>
-<p><strong>자유도가 4인 카이제곱분포의 확률밀도함수를 그려보세요.</strong></p>
-<div id="1cfcb463" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">40</span>, <span class="dv">200</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> chi2.pdf(k, <span class="dv">4</span>)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>plt.plot(k,y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="hw7_files/figure-html/cell-9-output-1.png" width="587" height="411" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
+<p><strong>유의수준 0.2를 기준으로 통계적으로 유의한 변수</strong></p>
+<p>P&gt;|z|가 0.2보다 작은 변수는 <strong>LI</strong>, <strong>TEMP</strong></p>
 </section>
-<section id="section-9" class="level2">
-<h2 class="anchored" data-anchor-id="section-9">2.</h2>
-<p><strong>다음의 확률을 구해보세요. 𝑃 (3 ≤ 𝑋 ≤ 5)</strong></p>
-<div id="5dc38922" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>chi_cdf <span class="op">=</span> chi2.cdf(<span class="dv">5</span>, <span class="dv">4</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>chi_cdf2 <span class="op">=</span> chi2.cdf(<span class="dv">3</span>, <span class="dv">4</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(chi_cdf <span class="op">-</span> chi_cdf2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="q4" class="level1">
+<h1>Q4</h1>
+<p><strong>다음 환자에 대한 오즈는 얼마인가요?</strong></p>
+<p>CELL (골수의 세포성): 65%<br> SMEAR (골수편의 백혈구 비율): 45%<br> INFIL (골수의 백혈병 세포 침투 비율): 55%<br> LI (골수 백혈병 세포의 라벨링 인덱스): 1.2<br> BLAST (말초혈액의 백혈병 세포 수): 1.1 세포/μL<br> TEMP (치료 시작 전 최고 체온): 0.9<br></p>
+<div id="5220c23b" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>coefficients <span class="op">=</span> model.params</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>my_odds <span class="op">=</span> np.exp(<span class="fl">64.2581</span> <span class="op">+</span><span class="fl">30.8301</span><span class="op">*</span><span class="fl">0.65</span> <span class="op">+</span> <span class="fl">24.6863</span><span class="op">*</span><span class="fl">0.45</span> <span class="op">-</span><span class="fl">24.9745</span><span class="op">*</span><span class="fl">0.55</span> <span class="op">+</span><span class="fl">4.3605</span><span class="op">*</span><span class="fl">1.2</span> <span class="op">-</span><span class="fl">0.0115</span><span class="op">*</span><span class="fl">1.1</span> <span class="op">-</span><span class="fl">100.1734</span><span class="op">*</span><span class="fl">0.9</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_odds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>0.27052790518742903</code></pre>
+<pre><code>0.03817459641135519</code></pre>
 </div>
 </div>
 </section>
-<section id="section-10" class="level2">
-<h2 class="anchored" data-anchor-id="section-10">3.</h2>
-<p><strong>자유도가 4인 카이제곱분포에서 크기가 1000인 표본을 뽑은 후, 히스토그램을 그려보세요.</strong></p>
-<div id="100c33ba" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> chi2.rvs(<span class="dv">4</span>, size <span class="op">=</span> <span class="dv">1000</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>plt.hist(sample, bins<span class="op">=</span><span class="dv">30</span>, density<span class="op">=</span><span class="va">True</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="q5" class="level1">
+<h1>Q5</h1>
+<p><strong>위 환자의 혈액에서 백혈병 세포가 관측되지 않은 확률은 얼마인가요?</strong></p>
+<div id="1d006294" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(my_odds <span class="op">/</span> (my_odds<span class="op">+</span><span class="dv">1</span>),<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>(array([0.06123809, 0.19051851, 0.16194074, 0.16738412, 0.17691005,
-        0.11975449, 0.11975449, 0.08437248, 0.06395979, 0.04218624,
-        0.04490793, 0.02721693, 0.03129947, 0.02313439, 0.01496931,
-        0.00680423, 0.00816508, 0.00544339, 0.00272169, 0.00272169,
-        0.00272169, 0.        , 0.        , 0.        , 0.00136085,
-        0.        , 0.        , 0.        , 0.        , 0.00136085]),
- array([ 0.09566344,  0.83050017,  1.5653369 ,  2.30017363,  3.03501035,
-         3.76984708,  4.50468381,  5.23952054,  5.97435727,  6.70919399,
-         7.44403072,  8.17886745,  8.91370418,  9.6485409 , 10.38337763,
-        11.11821436, 11.85305109, 12.58788782, 13.32272454, 14.05756127,
-        14.792398  , 15.52723473, 16.26207145, 16.99690818, 17.73174491,
-        18.46658164, 19.20141836, 19.93625509, 20.67109182, 21.40592855,
-        22.14076528]),
- &lt;BarContainer object of 30 artists&gt;)</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="hw7_files/figure-html/cell-11-output-2.png" width="587" height="416" class="figure-img"></p>
-</figure>
-</div>
+<pre><code>np.float64(0.037)</code></pre>
 </div>
 </div>
 </section>
-<section id="section-11" class="level2">
-<h2 class="anchored" data-anchor-id="section-11">4.</h2>
-<p><strong>자유도가 4인 카이제곱분포를 따르는 확률변수에서 나올 수 있는 값 중 상위 5%에 해당하는 값은 얼마인지 계산해보세요.</strong></p>
-<div id="d21a95ff" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(chi2.ppf(<span class="fl">0.95</span>, <span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="q6" class="level1">
+<h1>Q6</h1>
+<p><strong>TEMP 변수의 계수는 얼마이며, 해당 계수를 사용해서 TEMP 변수가 백혈병 치료에 대한 영향을 설명하시오.</strong></p>
+<p>계수는 -100.1734</p>
+<div id="e5d4072d" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>odd_ratio <span class="op">=</span> np.exp(<span class="op">-</span><span class="fl">100.1734</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(odd_ratio)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>9.487729036781154</code></pre>
+<pre><code>3.1278444454718357e-44</code></pre>
 </div>
 </div>
+<p>온도가 1단위 증가해도 백혈병 비관측에 대한 오즈가 증가하지 않는다.</p>
 </section>
-<section id="section-12" class="level2">
-<h2 class="anchored" data-anchor-id="section-12">5.</h2>
-<p><strong>3번에서 뽑힌 표본값들 중 상위 5%에 위치한 표본의 값은 얼마인가요?</strong></p>
-<div id="02ddcd4d" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.percentile(sample, <span class="dv">95</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="q7" class="level1">
+<h1>Q7</h1>
+<p><strong>CELL 변수의 99% 오즈비에 대한 신뢰구간을 구하시오.</strong></p>
+<div id="79bc5d60" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>cell_coef <span class="op">=</span> model.params[<span class="st">'CELL'</span>]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>cell_se <span class="op">=</span> model.bse[<span class="st">'CELL'</span>]</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> norm.ppf(<span class="fl">0.995</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>lower_bound_coef <span class="op">=</span> cell_coef <span class="op">-</span> z <span class="op">*</span> cell_se</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>upper_bound_coef <span class="op">=</span> cell_coef <span class="op">+</span> z<span class="op">*</span> cell_se</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>lower_bound_or <span class="op">=</span> np.exp(lower_bound_coef)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>upper_bound_or <span class="op">=</span> np.exp(upper_bound_coef)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"오즈비의 신뢰구간은</span><span class="sc">{</span>lower_bound_or<span class="sc">}</span><span class="ss">에서 </span><span class="sc">{</span>upper_bound_or<span class="sc">}</span><span class="ss">까지지"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>9.674938476961021</code></pre>
+<pre><code>오즈비의 신뢰구간은1.1673039739716536e-45에서 5.145962460342642e+71까지지</code></pre>
 </div>
 </div>
 </section>
-<section id="평균이-3-표준편차가-2인-정규분포를-따르는-확률변수에서-크기가-20인-표본-𝑥1-𝑥20을-뽑은-후-표본분산을-계산한-것을-𝑠12이라-생각해보죠.-다음을-수행해보세요" class="level2">
-<h2 class="anchored" data-anchor-id="평균이-3-표준편차가-2인-정규분포를-따르는-확률변수에서-크기가-20인-표본-𝑥1-𝑥20을-뽑은-후-표본분산을-계산한-것을-𝑠12이라-생각해보죠.-다음을-수행해보세요">6. 평균이 3, 표준편차가 2인 정규분포를 따르는 확률변수에서 크기가 20인 표본, 𝑥1, …, 𝑥20,을 뽑은 후 표본분산을 계산한 것을 𝑠1^2이라 생각해보죠. 다음을 수행해보세요!</h2>
-<ul>
-<li>같은 방법으로 500개의 𝑠^2들, 𝑠1^2, 𝑠2^2, …, 𝑠500^2 발생시킵니다.</li>
-<li>발생한 500개의 𝑠^2 들 각각에 4.75를 곱하고, 그것들의 히스토그램을 그려보세요. (히스토그램을 그릴 때 probability = TRUE 옵션을 사용해서 그릴 것)</li>
-<li>위에서 그린 히스토그램에 자유도가 19인 카이제곱분포 확률밀도함수를 겹쳐그려보세요.</li>
-</ul>
-<div id="2fc8c187" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># x = norm.rvs(3, 2, size = 20, random_state = 2024)</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># x_var = np.var(x, ddof = 1)</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 사용할 예정</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">2024</span>)</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>val_list <span class="op">=</span> []</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">500</span>):</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> norm.rvs(<span class="dv">3</span>, <span class="dv">2</span>, size <span class="op">=</span> <span class="dv">20</span>)</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    x_var <span class="op">=</span> np.var(x, ddof <span class="op">=</span> <span class="dv">1</span>)</span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    val_list.append(x_var)</span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>val_list <span class="op">=</span> np.array(val_list) <span class="op">*</span> <span class="fl">4.75</span></span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>plt.hist(val_list, bins <span class="op">=</span> <span class="dv">30</span>, density<span class="op">=</span><span class="va">True</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>plt.plot(np.linspace(<span class="dv">0</span>, <span class="bu">max</span>(val_list), <span class="dv">200</span>),</span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>         chi2.pdf(k,<span class="dv">19</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="hw7_files/figure-html/cell-14-output-1.png" width="579" height="411" class="figure-img"></p>
-</figure>
+<section id="q8" class="level1">
+<h1>Q8</h1>
+<p><strong>주어진 데이터에 대하여 로지스틱 회귀 모델의 예측 확률을 구한 후,</strong><br> <strong>50% 이상인 경우 1로 처리하여, 혼동 행렬를 구하시오.</strong></p>
+<div id="b3bcd7cd" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'predicted'</span>] <span class="op">=</span> model.predict() <span class="op">&gt;=</span> <span class="fl">0.5</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>conf_matrix <span class="op">=</span> confusion_matrix(df[<span class="st">'REMISS'</span>], df[<span class="st">'predicted'</span>])</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(conf_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[15  3]
+ [ 4  5]]</code></pre>
 </div>
+</div>
+</section>
+<section id="q9" class="level1">
+<h1>Q9</h1>
+<p><strong>해당 모델의 Accuracy는 얼마인가요?</strong></p>
+<div id="5b017986" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>accuracy <span class="op">=</span> accuracy_score(df[<span class="st">'REMISS'</span>], df[<span class="st">'predicted'</span>])</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'accuracy점수는 </span><span class="sc">{</span>accuracy<span class="sc">}</span><span class="ss">입니다.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>accuracy점수는 0.7407407407407407입니다.</code></pre>
+</div>
+</div>
+</section>
+<section id="q10" class="level1">
+<h1>Q10</h1>
+<p>**해당 모델의 F1 Score를 구하세요.*</p>
+<div id="48294a2d" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>f1 <span class="op">=</span> f1_score(df[<span class="st">'REMISS'</span>], df[<span class="st">'predicted'</span>])</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'f1점수는 </span><span class="sc">{</span>f1<span class="sc">}</span><span class="ss">입니다.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>f1점수는 0.5882352941176471입니다.</code></pre>
 </div>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
